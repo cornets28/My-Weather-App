@@ -16,7 +16,7 @@ const renderWeatherData = (weatherData, otherWeatherDiv) => {
   if (weatherData.cod !== '404') {
     location.textContent = `${weatherData.name}, ${weatherData.sys.country}`;
     weather.textContent = `${weatherData.main.temp} °C`;
-    weather2.textContent = `${weatherData.main.temp_max} F`;
+    weather2.textContent = `Pressure: ${weatherData.main.pressure}`;
     humidity.textContent = `Humidity: ${weatherData.main.humidity}%`;
   } else {
     location.textContent = 'CITY NOT FOUND!';

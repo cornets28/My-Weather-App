@@ -56,11 +56,11 @@ body {
   font-size: 32px;
 }
 
-#weather, #weather2 {
+#weather {
   font-size: 40px;
 }
 
-#humidity {
+#humidity, #weather2{
   font-size: 24px;
 }
 
