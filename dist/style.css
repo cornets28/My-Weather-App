@@ -21,6 +21,15 @@ body {
   color: black;
 }
 
+#weatherCondRain {
+  background: url('https://cdn3.iconfinder.com/data/icons/picons-weather/57/15_heavy_rain-512.png') no-repeat center center fixed; 
+}
+
+#weatherCondClear {
+  background: url('https://cdn4.iconfinder.com/data/icons/sun-11/50/20-512.png') no-repeat center center fixed; 
+}
+
+
 
 #city-search{
   width: 5000px;
