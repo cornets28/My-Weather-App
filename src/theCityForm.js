@@ -24,21 +24,3 @@ const theCityForm = `
 export default theCityForm;
 
 
-// try this tomorrow:
-// create a file like theCityFrom
-// call in the if statement in the CondRain but  with a static image
-
-
-// const template = `
-//   <div class="popup">
-
-//     <div class="popup-weather-main">
-//       <div class="popup-weather-img">
-//         <img src="https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png">
-//       </div>
-//       <h4 class="popup-temp"><span class="value">${weatherData.main.temp}</span>
-//       <span class="unit">°C</span></h4>
-//     </div>
-//     <div class="popup-weather-desc">${weatherData.weather[0].description.toUpperCase()}</div>
-//   </div>
-//   `;

@@ -16,19 +16,27 @@ const renderWeatherData = (weatherData, otherWeatherDiv) => {
   const humidity = otherWeatherDiv.querySelector('#humidity');
 
 
+
+
   if (weatherData.cod !== '404') {
     location.textContent = `${weatherData.name}, ${weatherData.sys.country}`;
+
+    
     weather.textContent = `${weatherData.main.temp} °C`;
-    const celcuis = weatherData.main.temp;
-    const fahrenheit = Math.round((celcuis * 9) / 5 + 32);
-    weather2.textContent = `${fahrenheit} °F`;
+    // const celcuis = weatherData.main.temp;
+    // const fahrenheit = Math.round((celcuis * 9) / 5 + 32);
+    // weather2.textContent = `${fahrenheit} °F`;
 
     humidity.innerHTML = `Humidity: ${weatherData.main.humidity}%`;
+    weatherCondRain.textContent = '';
     const iconCode = weatherData.weather[0].icon;
     const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
     const img = document.createElement('img');
     img.setAttribute('src', iconUrl);
     weatherCondRain.appendChild(img);
+
+   
+    
   } else {
     location.textContent = 'CITY NOT FOUND!';
     weather.textContent = '';
