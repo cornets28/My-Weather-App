@@ -11,38 +11,26 @@ const weatherDiv = document.querySelector('.weather-info');
 const renderWeatherData = (weatherData, otherWeatherDiv) => {
   const location = otherWeatherDiv.querySelector('#location');
   const weather = otherWeatherDiv.querySelector('#weather');
-  const weather2 = otherWeatherDiv.querySelector('#weather2');
-  const weatherCondRain = otherWeatherDiv.querySelector('#weatherCondRain');
+  const weatherCondIcon = otherWeatherDiv.querySelector('#weatherCondIcon');
   const humidity = otherWeatherDiv.querySelector('#humidity');
-
-
 
 
   if (weatherData.cod !== '404') {
     location.textContent = `${weatherData.name}, ${weatherData.sys.country}`;
-
-    
     weather.textContent = `${weatherData.main.temp} °C`;
-    // const celcuis = weatherData.main.temp;
-    // const fahrenheit = Math.round((celcuis * 9) / 5 + 32);
-    // weather2.textContent = `${fahrenheit} °F`;
-
     humidity.innerHTML = `Humidity: ${weatherData.main.humidity}%`;
-    weatherCondRain.textContent = '';
+
+    weatherCondIcon.textContent = '';
     const iconCode = weatherData.weather[0].icon;
     const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
     const img = document.createElement('img');
     img.setAttribute('src', iconUrl);
-    weatherCondRain.appendChild(img);
-
-   
-    
+    weatherCondIcon.appendChild(img);
   } else {
     location.textContent = 'CITY NOT FOUND!';
     weather.textContent = '';
-    weather2.textContent = '';
     humidity.textContent = '';
-    weatherCondRain.textContent = '';
+    weatherCondIcon.textContent = '';
   }
 };
 

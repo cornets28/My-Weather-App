@@ -22,5 +22,3 @@ const theCityForm = `
 
 
 export default theCityForm;
-
-
