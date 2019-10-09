@@ -5,12 +5,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "watch": "webpack --watch --mode development",
-    "start": "webpack-dev-server --open --mode development",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "start": "webpack-dev-server --open --mode development"
+  
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/CornetS28/My-Weather-App/issues"
   },
-  
   "devDependencies": {
     "css-loader": "^3.2.0",
     "eslint": "^6.5.1",
