@@ -9,7 +9,7 @@
 - More information [here](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page)
 <br>
 
-- Live version of the project can be found [here](https://github.com/CornetS28/My-Weather-App/)
+- Live demo of the project can be found [here](https://cornets28.github.io/My-Weather-App/)
 <br>
 
 - The project was built by Samuel Cornet and is available [here](https://github.com/CornetS28/My-Weather-App.git)
