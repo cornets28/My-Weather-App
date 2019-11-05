@@ -3,16 +3,16 @@ import theCityForm from './theCityForm';
 import saveToLocalStorage from './saveToLocalStorage';
 import './style.css';
 
-const formArea = document.querySelector('#form-area');
-const btnChangeCity = document.querySelector('#btn-change-city');
-const weatherDiv = document.querySelector('.weather-info');
-
+const weatherDiv = document.querySelector('.weatherInf');
+const form = document.querySelector('#formA');
+const chngeCitybutton = document.querySelector('#change-city-btn');
 
 const renderWeatherData = (weatherData, otherWeatherDiv) => {
-  const location = otherWeatherDiv.querySelector('#location');
-  const weather = otherWeatherDiv.querySelector('#weather');
-  const weatherCondIcon = otherWeatherDiv.querySelector('#weatherCondIcon');
+  const location = otherWeatherDiv.querySelector('#loc');
   const humidity = otherWeatherDiv.querySelector('#humidity');
+  const weather = otherWeatherDiv.querySelector('#weather');
+  const weatherIcon = otherWeatherDiv.querySelector('#weatherIcon');
+ 
 
 
   if (weatherData.cod !== '404') {
@@ -20,17 +20,17 @@ const renderWeatherData = (weatherData, otherWeatherDiv) => {
     weather.textContent = `${weatherData.main.temp} °C`;
     humidity.innerHTML = `Humidity: ${weatherData.main.humidity}%`;
 
-    weatherCondIcon.textContent = '';
+    weatherIcon.textContent = '';
     const iconCode = weatherData.weather[0].icon;
     const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
     const img = document.createElement('img');
     img.setAttribute('src', iconUrl);
-    weatherCondIcon.appendChild(img);
+    weatherIcon.appendChild(img);
   } else {
     location.textContent = 'CITY NOT FOUND!';
     weather.textContent = '';
     humidity.textContent = '';
-    weatherCondIcon.textContent = '';
+    weatherIcon.textContent = '';
   }
 };
 
@@ -46,7 +46,7 @@ const getCityInfo = async (city) => {
 };
 
 const renderCityForm = (formRaw) => {
-  formArea.innerHTML = formRaw;
+  form.innerHTML = formRaw;
 
   const cityForm = document.querySelector('#city-search');
   const cityInput = document.querySelector('#city-name');
@@ -63,8 +63,8 @@ const renderCityForm = (formRaw) => {
 if (localStorage.getItem('weatherData')) {
   const weatherData = JSON.parse(localStorage.getItem('weatherData'));
   renderWeatherData(weatherData, weatherDiv);
-  btnChangeCity.style.display = 'block';
-  btnChangeCity.addEventListener('click', (e) => {
+  chngeCitybutton.style.display = 'block';
+  chngeCitybutton.addEventListener('click', (e) => {
     e.preventDefault();
     renderCityForm(theCityForm);
   });

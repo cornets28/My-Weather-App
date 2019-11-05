@@ -15,10 +15,10 @@ body {
 }
 .weatherHead {
   text-align: center;
-  font-size: 70px;
-  margin-top: 70px;
+  font-size: 69px;
+  margin-top: 69px;
   font-family: 'Arial, Helvetica, sans-serif';
-  color: black;
+  color: rgb(48, 47, 47);
 }
 
 #weatherCondRain {
@@ -29,33 +29,25 @@ body {
   background: url('https://cdn4.iconfinder.com/data/icons/sun-11/50/20-512.png') no-repeat center center fixed; 
 }
 
-
-
-#city-search{
+#city-search {
+  margin-left: 30%;
+  margin-right: 32%;
   width: 5000px;
   align-items: center;
   border-radius: 10px;
-  margin-left: 30%;
-  margin-right: 32%;
+  
 }
-.btn-1{
-  border-radius: 10px;
+.btn-city {
   margin-left: 32%;
   margin-right: 320%;
-  
+  border-radius: 10px; 
 }
          
 #btn-change-city {
   width: 400px;
 }
 
-.weather-info {
-  width: 400px;
-  height: 300px;
-  background-color: rgb(57, 150, 236);
-  opacity: 0.9;
-  padding: 10px;
-  display: flex;
+.weatherInf {
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
@@ -63,9 +55,15 @@ body {
   margin-left: 32%;
   margin-right: 32%;
   margin-top: 1%;
+  width: 400px;
+  height: 300px;
+  background-color: rgb(57, 150, 236);
+  opacity: 0.9;
+  padding: 10px;
+  display: flex;
 }
 
-#location {
+#loc {
   font-size: 32px;
 }
 
@@ -74,7 +72,7 @@ body {
 }
 
 #humidity, #weather2{
-  font-size: 24px;
+  font-size: 23px;
 }
 
 .hidden {
