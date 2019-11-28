@@ -1,10 +1,15 @@
 # My-Weather-App
 
-- This project is abot creating a weather App created with Javascript dynamically with ES6 modules and start to work with webpack.. It is part of the courses of The Odin Project.
+- This project is about creating a dynamic weather App with Javascript using ES6 modules, HtML, CSS and webpack. It is part of the courses of The Odin Project.
 <br>
 
-- More information [here](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page).
+- To build this project, I have used the weather forecast site [Open Weather Map](https://openweathermap.org/)
 <br>
-- Live version of the project can be found [here](https://github.com/CornetS28/My-Weather-App) 
+
+- More information [here](https://www.theodinproject.com/courses/javascript/lessons/restaurant-page)
 <br>
+
+- Live demo of the project can be found [here](https://cornets28.github.io/My-Weather-App/)
+<br>
+
 - The project was built by Samuel Cornet and is available [here](https://github.com/CornetS28/My-Weather-App.git)

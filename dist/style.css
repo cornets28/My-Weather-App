@@ -16,10 +16,19 @@ body {
 .weatherHead {
   text-align: center;
   font-size: 70px;
-  margin-top: 110px;
+  margin-top: 70px;
   font-family: 'Arial, Helvetica, sans-serif';
   color: black;
 }
+
+#weatherCondRain {
+  background: url('https://cdn3.iconfinder.com/data/icons/picons-weather/57/15_heavy_rain-512.png') no-repeat center center fixed; 
+}
+
+#weatherCondClear {
+  background: url('https://cdn4.iconfinder.com/data/icons/sun-11/50/20-512.png') no-repeat center center fixed; 
+}
+
 
 
 #city-search{
@@ -31,14 +40,18 @@ body {
 }
 .btn-1{
   border-radius: 10px;
-  margin-left: 40%;
-  margin-right: 40%;
+  margin-left: 32%;
+  margin-right: 320%;
+  
 }
-
+         
+#btn-change-city {
+  width: 400px;
+}
 
 .weather-info {
   width: 400px;
-  height: 250px;
+  height: 300px;
   background-color: rgb(57, 150, 236);
   opacity: 0.9;
   padding: 10px;
@@ -57,10 +70,10 @@ body {
 }
 
 #weather {
-  font-size: 48px;
+  font-size: 40px;
 }
 
-#humidity {
+#humidity, #weather2{
   font-size: 24px;
 }
 

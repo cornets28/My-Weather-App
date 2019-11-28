@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather App</title>
   <link rel="stylesheet" href="./style.css" />
@@ -14,16 +15,42 @@
       <div class="weather-info">
           <p id="location"></p>
           <p id="weather"></p>
-          <p id="humidity"></p>
+          <div id="weatherCondIcon"></div>
+
+          <div class="form-group">
+              <label for="unit">Units: </label>
+              <select onchange="weatherUnit(this.value)" id="unitSelector">
+                <option value="C">Celsius</option>
+                <option value="F">Fahrenheit</option>
+              </select>
+            </div>
+          <p id="humidity"></p>  
+
+          
+          <script>
+            function weatherUnit(value){
+              const weatherData = JSON.parse(localStorage.getItem('weatherData'));
+              const celcius = weatherData.main.temp;
+              if (localStorage.getItem('weatherData')) {
+              if(value==="C"){
+                document.getElementById("weather").innerHTML=`${celcius} °C`
+              }else if(value==="F"){
+                const fahrenheit = Math.round((celcius * 9) / 5 + 32);
+                document.getElementById("weather").innerHTML=`${fahrenheit} °F`
+              }
+            }}
+          </script>
+          
       </div>
+      
       <div class="btn-1"><br>
-         <button id="btn-change-city" class="btn btn-info">Clear | Search Field</button>
-        </div>
+         <button id="btn-change-city" class="btn btn-info">Change City</button>
+      </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script src="/index.js"></script>
+  <!-- <script src="/index.js"></script> -->
   
   <script src="./main.js"></script>
 </body>
